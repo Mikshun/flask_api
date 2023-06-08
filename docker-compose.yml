@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  pgdb:
+    image: postgres
+    environment:
+      - POSTGRES_DB=victorine
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=admin
+    container_name: pgdb
+    volumes:
+      - pgdbdata:/var/lib/postgresql/data/
+
+
+  victroine:
+    build: ./
+    container_name: flask
+    command: python3 ./main.py
+    volumes:
+      - ./:/usr/src/app
+    ports:
+      - '8080:8080'
+    depends_on:
+      - pgdb
+
+
+
+volumes:
+  pgdbdata: null

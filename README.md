@@ -4,8 +4,8 @@
 ## Инструкция Запуска
 + Скачать репизотрий моно с помощью  команды:
   ```bash
-     git clone https://github.com/Mikshun/Test_task
+     git clone https://github.com/Mikshun/flask_api
      ```
-+ Перейти в корневую папку проект pythonProject2
++ Перейти в корневую папку проект
 + Через терминал запустить команду: docker-compose up
 + После сборки и запуска контейнера перейти по второму ip адресу.
